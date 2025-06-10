@@ -1,10 +1,10 @@
 # PostgreSQL Docker Image
 
-A production-ready PostgreSQL Docker image based on Ubuntu Noble (24.04) with PostgreSQL 17.5.
+A production-ready PostgreSQL Docker image based on Ubuntu Jammy (22.04) with PostgreSQL 17.5.
 
 ## Features
 
-- Based on Ubuntu Noble (24.04)
+- Based on Ubuntu Jammy (22.04)
 - PostgreSQL 17.5
 - UTF-8 enabled by default
 - Secure initialization process
@@ -20,7 +20,7 @@ docker run -d \
   --name postgres \
   -e POSTGRES_PASSWORD=yourpassword \
   -p 5432:5432 \
-  ghcr.io/andrielson/postgres:17-noble
+  ghcr.io/andrielson/postgres:17-jammy
 
 # With persistent storage
 docker run -d \
@@ -28,7 +28,7 @@ docker run -d \
   -e POSTGRES_PASSWORD=yourpassword \
   -v /path/to/data:/var/lib/postgresql/data \
   -p 5432:5432 \
-  ghcr.io/andrielson/postgres:17-noble
+  ghcr.io/andrielson/postgres:17-jammy
 ```
 
 ## Environment Variables
@@ -61,7 +61,7 @@ Scripts are executed in alphabetical order.
 ## Building the Image
 
 ```bash
-docker build -t postgres:17-noble .
+docker build -t postgres:17-jammy .
 ```
 
 ## Contributing
