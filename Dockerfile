@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM ubuntu:jammy
+FROM ubuntu:noble
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=UTC
@@ -87,7 +87,7 @@ RUN set -ex; \
 ENV PG_MAJOR=16
 ENV PATH=$PATH:/usr/lib/postgresql/$PG_MAJOR/bin
 
-ENV PG_VERSION=16.9-1.pgdg22.04+1
+ENV PG_VERSION=16.9-1.pgdg24.04+1
 
 RUN set -ex; \
 	\
