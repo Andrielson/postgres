@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - 16-jammy
+    paths:
+      - ".github/workflows/build-and-publish.yml"
+      - docker-ensure-initdb.sh
+      - docker-entrypoint.sh
+      - Dockerfile
 
 jobs:
   build:
