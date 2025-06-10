@@ -1,11 +1,11 @@
 # PostgreSQL Docker Image
 
-A production-ready PostgreSQL Docker image based on Ubuntu Jammy (22.04) with PostgreSQL 17.5.
+A production-ready PostgreSQL Docker image based on Ubuntu Jammy (22.04) with PostgreSQL 16.9.
 
 ## Features
 
 - Based on Ubuntu Jammy (22.04)
-- PostgreSQL 17.5
+- PostgreSQL 16.9
 - UTF-8 enabled by default
 - Secure initialization process
 - Configurable through environment variables
@@ -20,7 +20,7 @@ docker run -d \
   --name postgres \
   -e POSTGRES_PASSWORD=yourpassword \
   -p 5432:5432 \
-  ghcr.io/andrielson/postgres:17-jammy
+  ghcr.io/andrielson/postgres:16-jammy
 
 # With persistent storage
 docker run -d \
@@ -28,7 +28,7 @@ docker run -d \
   -e POSTGRES_PASSWORD=yourpassword \
   -v /path/to/data:/var/lib/postgresql/data \
   -p 5432:5432 \
-  ghcr.io/andrielson/postgres:17-jammy
+  ghcr.io/andrielson/postgres:16-jammy
 ```
 
 ## Environment Variables
@@ -61,7 +61,7 @@ Scripts are executed in alphabetical order.
 ## Building the Image
 
 ```bash
-docker build -t postgres:17-jammy .
+docker build -t postgres:16-jammy .
 ```
 
 ## Contributing
