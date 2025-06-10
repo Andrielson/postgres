@@ -3,7 +3,7 @@ name: Docker Image CI/CD for latest
 on:
   push:
     branches:
-      - 17-noble
+      - 17-jammy
 
 jobs:
   build:
@@ -47,4 +47,4 @@ jobs:
           file: Dockerfile
           platforms: linux/arm64, linux/amd64
           push: true
-          tags: ghcr.io/${{ steps.extract_repository_name.outputs.repository_name }}:17-noble
+          tags: ghcr.io/${{ steps.extract_repository_name.outputs.repository_name }}:17-jammy
